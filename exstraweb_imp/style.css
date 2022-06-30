@@ -1,0 +1,693 @@
+/* CSS Variables */
+:root {
+  --primary: #FEECE9;
+  --ewhite: #e9e9e9;
+  --dark: #5161db;
+  --light: #CCD1E4;
+  --picked: #FE7E6D;
+  --blackdark: #30303b;
+  --PastelGray: #cfcfc4;
+  --shadow: 0 3px 5px rgba(104, 104, 104, 0.8);
+  --shadowforimg: 0 3px 5px -5px rgb(151, 52, 39);
+  --grad: linear-gradient(
+    15deg,
+    red,
+    #5161db
+  );
+
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+.body {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns:  2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  background: #FEECE9;
+  margin: 0px 50px;
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* languig picker */
+.menuLanguig ul {
+  display: grid;
+  justify-items: center;
+  background:var(--dark);
+  grid-gap: 1rem;
+  padding: 1rem;
+  /* 
+  margin what gave it the empty anozing line
+*/
+  margin: 0;
+  list-style: none;
+  grid-template-columns: repeat(1, 1fr);
+  align-self: center;
+ /* box-shadow: var(--shadow);*/
+  border-end-start-radius: 0.5rem;
+}
+/* 
+just to know how to select a sheild
+.main-nav ul> li:last-child{
+  background: none;
+  
+}
+*/
+.menuLanguig {    
+  z-index: 50;
+  grid-column: 1/6;   
+  grid-row: 1/1;
+  transform:translateY(-8rem);
+      transition: all 0.7s;
+      pointer-events: none;
+}
+
+.menuLanguig li.exspandLan {
+  display: grid;
+  background: rgba(255, 255, 255, 0);
+  grid-template-columns: repeat(6, 1fr);
+  pointer-events: all;
+}
+
+.menuLanguig #myLinkslanguig {
+  
+  transform:translateY(-5.3rem)
+}
+
+.smallerlan {
+  display: grid;
+  grid-column: 6/7;
+  align-self: end;
+  background: var(--dark);
+  z-index: 1;
+  transform:translateY(-1rem);
+  padding-top: 1rem;
+  border-radius:  0rem 0rem 2rem 0.5rem;
+}
+ 
+.menuLanguig a {
+  z-index: 1;
+  background-color: var(--dark);
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  background: linear-gradient(to top,var(--dark), var(--dark),  var(--dark),  var(--dark));
+   transition: background-color 0.4s linear;
+   pointer-events: all;
+}
+.menuLanguig a:hover {
+  background:linear-gradient(to top,rgba(0, 0, 0, 0), var(--dark),  var(--dark),  var(--dark));
+  background-color: var(--picked);
+
+}
+
+.menuLanguig a.shadoLan {
+
+ /* box-shadow: var(--shadow); */
+  /*box-shadow: 0 5px 5px rgba(104, 104, 104, 0.8);*/
+  border-radius:  0rem 0rem 2rem 0.5rem;
+
+
+}
+.expandLan  {
+  grid-column: 6;
+  background: var(--dark);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+
+}
+/* end can be copyed */
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  justify-items: center;
+  background:var(--dark);
+  grid-gap: 1rem;
+  padding: 1rem;
+  padding-top: 4rem;
+  /* 
+  margin what gave it the empty anozing line
+*/
+  margin: 0;
+  list-style: none;
+  grid-template-columns: repeat(1, 1fr);
+  align-self: center;
+ /* box-shadow: var(--shadow);*/
+  border-end-start-radius: 0.5rem;
+}
+/* 
+just to know how to select a sheild
+.main-nav ul> li:last-child{
+  background: none;
+  
+}
+*/
+.main-nav {    
+  z-index: 40;
+  grid-column: 1/7;  
+  grid-row: 1/1;
+  transition: all 0.7s;
+  transform:translateY(-19.5rem);
+}
+
+.main-nav li.exspand {
+  display: grid;
+  background: rgba(255, 0, 0, 0);
+  grid-template-columns: repeat(7, 1fr);
+  
+}
+
+.main-nav #myLinksnavbar {
+  
+  transform:translateY(0)
+}
+
+.smallernav {
+  display: grid;
+  grid-column: 7/8;
+  align-self: end;
+  background: var(--dark);
+  z-index: 1;
+  transform:translateY(-1rem);
+  padding-top: 1rem;
+  border-radius:  0rem 0rem 2rem 0.5rem;
+}
+ 
+.main-nav a {
+  
+  background-color: var(--dark);
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  background: linear-gradient(to top,var(--dark), var(--dark),  var(--dark),  var(--dark));
+   transition: background-color 0.4s linear;
+ 
+}
+.main-nav a:hover {
+  background:linear-gradient(to top,rgba(0, 0, 0, 0), var(--dark),  var(--dark),  var(--dark));
+  background-color: var(--picked);
+
+}
+
+.main-nav a.shado {
+
+ /* box-shadow: var(--shadow); */
+  /*box-shadow: 0 5px 5px rgba(104, 104, 104, 0.8);*/
+  border-radius:  0rem 0rem 2rem 0.5rem;
+
+}
+a.expand  {
+  grid-column: 6;
+  background: var(--dark);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+
+}
+
+/* this is the 3d seen*/
+.buttons3d{
+  justify-self: center;
+  z-index: 10;
+  grid-column: 1/7;
+  grid-row: 1;
+
+}
+
+.the_bottons_grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.thebeforthe3d {
+  padding-top: 10rem;
+  grid-row: 1;
+  grid-column: 1/7; 
+
+}
+
+.scene {
+
+  border: 1px solid #CCC;
+  margin: 12rem;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  margin: 0px auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+ 
+  transform: rotateX(354deg) translatez(15vw) ;
+
+  image-rendering:optimizeQuality;
+}
+
+.carousel__cell {
+  grid-column: 1/7;
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  z-index: 1;
+
+  /*border: 2px solid black;*/
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  /*filter: drop-shadow(0 0.2rem 0.25rem rgba(233, 25, 25, 0.2));*/
+  transition: transform 0.5s , opacity 0.5s;
+
+}
+
+.carousel__cell:nth-child(1) { opacity: 0; transform: translatex(0rem) translateZ(15vw);}
+.carousel__cell:nth-child(2) { opacity: 0.5; transform: translatex(15rem) translateZ(12vw); }
+.carousel__cell:nth-child(3) { opacity: 0.2; transform: translatex(20rem) translateZ(9vw); }
+.carousel__cell:nth-child(4) { opacity: 0.1; transform: translatex(12rem) translateZ(6vw); }
+.carousel__cell:nth-child(5) { opacity: 0.1; transform: translatex(-12rem) translateZ(6vw); }
+.carousel__cell:nth-child(6) { opacity: 0.2; transform: translatex(-20rem) translateZ(9vw); }
+.carousel__cell:nth-child(7) { opacity: 0.5; transform: translatex(-15rem) translateZ(12vw); }
+
+
+.redring {
+  grid-column: 1/7;
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  z-index: 2  ;
+
+  transform: rotateX(354deg) translatez(15vw) ;
+  transform-style: preserve-3d;
+  image-rendering:optimizeQuality;
+  /*border: 2px solid black;*/
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  /*filter: drop-shadow(0 0.2rem 0.25rem rgba(233, 25, 25, 0.2));*/
+  transition: transform 0.5s , opacity 1s;
+
+}
+
+.redring:nth-child(1) { opacity: 1; transform: translatex(0rem) translateZ(15vw);}
+.redring:nth-child(2) { opacity: 0; transform: translatex(15rem) translateZ(12vw); }
+.redring:nth-child(3) { opacity: 0; transform: translatex(20rem) translateZ(9vw); }
+.redring:nth-child(4) { opacity: 0; transform: translatex(12rem) translateZ(6vw); }
+.redring:nth-child(5) { opacity: 0; transform: translatex(-12rem) translateZ(6vw); }
+.redring:nth-child(6) { opacity: 0; transform: translatex(-20rem) translateZ(9vw); }
+.redring:nth-child(7) { opacity: 0; transform: translatex(-15rem) translateZ(12vw); }
+
+/* this is for the corsel bottons*/
+.previous-button{
+  z-index: 1;
+  justify-self: start;
+  grid-column: 3/4;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  background: var(--dark);
+  border-radius: 50%;
+  transform:translateY(-10rem) translatex(-0.5rem);
+  transition: 0.3s;
+}
+.previous-button:hover{
+  background: var(--light);
+}
+.previous-button::after{
+  content: '';
+  padding: 1.0rem;
+  background-color: var(--primary);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%, 100% 80%, 40% 49%, 100% 20%);
+  transition: 0.1s;
+}
+.previous-button:active::after{
+  clip-path: polygon(100% 0, 30% 50%, 100% 100%, 100% 80%, 70% 50%, 100% 20%);
+  background-color: var(--primary);
+  background-color: var(--dark);
+}
+
+
+.next-button{
+  z-index: 1;
+  justify-self: end;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  background: var(--dark);
+  border-radius: 50%;
+  transform:translateY(-10rem) translatex(0.5rem);
+  transition: 0.3s;
+}
+.next-button:hover{
+  background: var(--light);
+}
+.next-button::after{
+  content: '';
+  padding: 1.0rem;
+  background-color: var(--primary);
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 80%, 60% 50%, 0 20%);
+  transition: 0.1s;
+ }
+.next-button:active::after{
+  clip-path: polygon(0 0, 75% 50%, 0 100%, 0 80%, 30% 50%, 0 20%);
+  background-color: var(--dark);
+}
+
+/* this is for the arc*/
+.buttons3d svg {
+  justify-self: center;
+  grid-column:3/5;
+  transform:translateY(1rem);
+  width: 30rem;
+  height: 28rem;
+}
+
+
+/* for most insurances picker */
+.mainallfolders{
+  grid-column: 1 /  span 6;
+  display: grid;
+  list-style: none;
+  align-self: center;
+  z-index: 50; 
+  grid-gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  border-end-start-radius: 0.5rem;
+  margin: 0;
+  transform:translateY(-6rem);
+}
+.thebottonsgridlist{
+  grid-column: 1 /  span 2;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-end-start-radius: 0rem;
+  
+
+
+}
+.thebottonsgridlist li {
+  background: rgba(128, 11, 11, 0);
+}
+ 
+.thebottonsgridlist a {
+  background-color: transparent;
+  display: block;
+  text-decoration: none;
+  padding: 0.4rem;
+  width: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  transition: background-color 0.4s linear;
+ }
+ .thebottonsgridlist a:hover, a:focus, a:active {
+  background:linear-gradient(to top,rgba(0, 0, 0, 0), var(--dark),  var(--dark),  var(--dark));
+  background-color: var(--picked);
+}
+.foldertop {
+  align-self: end;
+  background-color: var(--dark);  
+  background: linear-gradient(12deg, rgba(81,97,219,1) 60%, rgba(0,255,149,1) 100%);
+  z-index: 1;
+  transform:translateY(3rem);
+  padding-bottom: 0rem;
+  border-radius:  0.5rem 2rem 0rem 0rem;
+  transition: transform 0.5s;
+}
+.placeholderInsurance{
+  grid-column: 1 /  span 2;
+  grid-row:3;
+}
+
+.maincontentshape {
+  height: 2fr;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--light);
+  background: var(--dark);
+  border-radius: 0.5rem;
+  
+}
+.imgesforform{
+  padding: 2rem;
+  border-radius: 3rem;
+  background: transparent;
+}
+.twolineddiv{
+  display: grid;
+  list-style: none;
+  align-self: center;
+  grid-gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  background: var(--dark);
+  color: var(--light);
+  border-radius: 0.5rem;
+}
+.twolineddiv ul{
+  padding: 0rem;
+}
+.twolineddiv:nth-child(1) {  color: var(--light);
+  background: linear-gradient(168deg, var(--dark) 60%, rgb(0, 174, 255) 100%);}
+.twolineddiv:nth-child(2) {  color: var(--blackdark);
+  background: linear-gradient(168deg, var(--PastelGray) 60%, rgb(221, 221, 221) 100%);}
+.twolineddiv:nth-child(3) {  color: var(--light);
+    background: linear-gradient(168deg, var(--dark) 60%, rgb(189, 139, 255) 100%);}
+  
+
+
+  .foldertop:nth-child(8) { grid-column: 1/3; grid-row:1/3;
+    padding-bottom: 5rem;
+    z-index: 0;
+    border-radius:  0rem 0rem 0rem 0rem;
+    background: var(--dark);
+    ;}
+  
+.foldertop:nth-child(1) { grid-column: 1; grid-row:1;;
+background: linear-gradient(12deg, var(--dark)60%, rgb(201, 255, 255) 100%);}
+.foldertop:nth-child(2) { grid-column: 2; grid-row:1;;
+background: linear-gradient(12deg, var(--dark) 60%, rgb(139, 218, 255) 100%);}
+
+
+.foldertop:nth-child(3) { grid-column: 1; grid-row:2;;
+  background: linear-gradient(12deg, var(--dark)60%, rgb(226, 201, 255) 100%);}
+.foldertop:nth-child(4) { grid-column: 2; grid-row:2;;
+  background: linear-gradient(12deg, var(--dark) 60%, rgb(189, 139, 255) 100%);}
+.foldertop:nth-child(5) { grid-column: 3; grid-row:2;;
+  background: linear-gradient(12deg, var(--dark) 60%, rgb(115, 255, 208) 100%);}
+.foldertop:nth-child(6) { grid-column: 4; grid-row:2;
+  background: linear-gradient(12deg, var(--dark) 60%, rgb(0, 255, 149)  100%);}
+.foldertop:nth-child(7) { grid-column: 5; grid-row:2;
+  background: linear-gradient(12deg, var(--dark) 60%, rgb(0, 225, 255) 100%);}
+/* end can be copyed */
+
+/* the svgs */
+.foldertop svg{
+  padding: 0;
+}
+.car
+{fill:none;stroke:var(--light);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.teeth
+{fill:none;stroke:var(--light);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;fill:var(--light);}
+.power
+{fill:none;stroke:var(--light);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.insurance
+{fill:none;stroke:var(--light);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;fill:var(--light);}
+.internet
+{fill:none;stroke:var(--light);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.royal1
+{fill:none;stroke:var(--light);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.royal2
+{fill:none;stroke:var(--light);stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;fill:var(--light);}
+.building1
+{fill-rule:evenodd;clip-rule:evenodd;fill:var(--light);}
+.building2
+{fill:var(--light);}
+.languiges
+{fill:var(--light);}
+.menu1
+{fill:var(--light);}
+
+/* the footer */
+.endfotter{
+  grid-column: 1 /  span 6;
+
+}
+.halferoffooter {    
+    display: grid;
+    list-style: none;
+    align-self: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--blackdark);
+    color: var(--PastelGray);
+    border-radius: 0.5rem 0.5rem 3rem 3rem;
+  }
+  .halferoffooter a {
+    z-index: 1;
+    background-color: var(--dark);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    background: linear-gradient(to top,var(--primary), var(--primary),  var(--primary),  var(--primary));
+    color: var(--blackdark);
+     transition: background-color 0.4s linear;
+     pointer-events: all;
+     list-style-type: none;
+  }
+  .halferoffooter a:hover {
+    background:linear-gradient(to top,rgba(0, 0, 0, 0), var(--primary),  var(--primary),  var(--primary));
+    background-color: var(--picked);
+  
+  }
+  .halferoffooter li {
+    list-style-type: none;
+    
+  }
+
+  .firsthalfinfo{
+    text-align: end;
+   
+  }
+  .gobackup{
+    column-span: all;
+    align-self: center;
+    
+    width: 18rem;
+  }
+
+  
+  .impresum{
+    grid-column: 1/7;
+    list-style: none;
+    align-self: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    background: var(--PastelGray);
+    color: var(--blackdark);
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    transform:translateY(-25rem);
+  }
+
+
+
+
+
+
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px ) {
+  html {
+    font-size: 8px;
+  }
+  .twolineddiv{
+    display: grid;
+    list-style: none;
+    align-self: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    background: var(--dark);
+    color: var(--light);
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px ),
+       screen and (max-height: 600px) {
+  html {
+    font-size: 8px;
+  }
+  .twolineddiv{
+    display: grid;
+    list-style: none;
+    align-self: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    background: var(--dark);
+    color: var(--light);
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 668px ),
+       screen and (max-height: 400px) {
+  html {
+    font-size: 5px;
+  }
+  .twolineddiv{
+    display: grid;
+    list-style: none;
+    align-self: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    background: var(--dark);
+    color: var(--light);
+    border-radius: 0.5rem;
+  }
+}

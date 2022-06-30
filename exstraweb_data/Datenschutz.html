@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+  <!-- Navigation -->
+  <nav id="myLinksnavbar" class="main-nav">
+    <ul>
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a id=#contactus>Contact us</a>
+      </li>
+      <li>
+        <a  href="exstraweb_data/Datenschutz.html">Impressum</a>
+      </li>
+
+    </ul>
+      <li  class="exspand">
+        <div class="smallernav"><a onclick="myFunctionnav()" class="shado" href="#">
+          <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 32 32" width="40" height="40"  xml:space="preserve">
+       <path class="menu1" d="M16,29.2c-7.3,0-13.2-6-13.2-13.2S8.7,2.8,16,2.8S29.2,8.7,29.2,16S23.3,29.2,16,29.2z M16,4.2
+         C9.5,4.2,4.2,9.5,4.2,16S9.5,27.8,16,27.8S27.8,22.5,27.8,16S22.5,4.2,16,4.2z"/>
+       <g>
+         <path class="menu1" d="M21.6,13H10.4c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8h11.2c0.4,0,0.8,0.3,0.8,0.8S22,13,21.6,13z M21.6,16.8
+           H10.4c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8h11.2c0.4,0,0.8,0.3,0.8,0.8C22.4,16.4,22,16.8,21.6,16.8z"/>
+         <g>
+           <path class="menu1" d="M21.6,20.5H10.4c-0.4,0-0.8-0.3-0.8-0.8S9.9,19,10.4,19h11.2c0.4,0,0.8,0.3,0.8,0.8S22,20.5,21.6,20.5z"/>
+         </g>
+       </g>
+       </svg>
+
+          </a></div>
+      </li>
+    </nav>
+    <main class="impresum">
+      <div class="textwidget"><p><strong>Impressum – Royal2030</strong></p>
+        <p>Adresse Information</p>
+        <ul>
+        <li>Krefelder straße 31</li>
+        <li>47226| Duisburg</li>
+        </ul>
+        <p>Kontakt Informationen</p>
+        <ul>
+        <li>Tel: +49 2065 8924431</li>
+        <li>Email: info@Royal2030.com</li>
+        </ul>
+        <p>Vorstand</p>
+        <ul>
+        <li>Omar Al Masri&nbsp; (Vors.)</li>
+        </ul>
+        <p>info@Royal2030.com</p>
+        <p>Steuerinformation</p>
+        <ul>
+        <li>Finanzamt Kamp-Lintfort</li>
+        </ul>
+        </div>
+    </main>
+   
+
+    <footer class="endfotter">
+      <div class="halferoffooter">
+        <div class="firsthalfinfo">
+          <ul>
+            <li>
+              <a  href="../exstraweb_imp/impresum" >Datenschutz</a>
+            </li>
+            <li>
+              <p></p>
+              <a  >Impressum</a>
+            </li>
+            <li>
+              <p></p>
+              <a  href="https://www.facebook.com/Royal2030">Facebook</a>
+            </li>
+            <li>
+              <p></p>
+              <a  href="https://www.tiktok.com/@royal20302?lang=ar">Tiktok</a>
+            </li>
+          </ul>
+        </div>
+    
+        <div id="contactus" class="secondhalfinfo">
+          <ul>
+            <li>
+              <p></p>
+              <a >Tel:+49 20658924431</a>
+            </li>
+            <li>
+              <p></p>
+              <a  href="https://www.google.com/maps/place/Royal+2030/@51.4090665,6.7166378,19z/data=!4m5!3m4!1s0x47b8bff2922adab3:0xbeff6796b4b2568f!8m2!3d51.4090697!4d6.7163262">Google Maps</a>
+            </li>
+            <li>
+              <p></p>
+              <a  href="https://wa.me/+4920658924431">Whatsapp</a>
+            </li>
+            <li>
+              <p></p>
+              <a  href="mailto: service@royal2030.com">Email</a>
+            </li>
+          </ul>
+        </div>
+    
+      </div>
+    </footer>
+    
+
+<script>
+var placeholder = 0;
+var cellCount = 7;
+var derectionofcursel=1;
+var selectedIndex = 0;
+var forarray1=0;
+var forarray2;
+var tranposex
+var tranposez
+var trueselected
+
+const txz1 = ["0",   "15", "0",  "1","4"];
+const txz2 = ["15",  "12", "0.5","0","3"];
+const txz3 = ["20",  "9",  "0.2","0","3"];
+const txz4 = ["12",  "6",  "0.1","0","3"];
+const txz5 = ["-12", "6",  "0.1","0","3"];
+const txz6 = ["-20", "9",  "0.2","0","3"];
+const txz7 = ["-15", "12", "0.5","0","3"];
+const alltxz= [txz1, txz2, txz3, txz4, txz5, txz6, txz7];
+
+function rotateCarousel() {
+  
+  
+  if (derectionofcursel == 1) {
+    selectedIndex=selectedIndex+1;
+  } else if (derectionofcursel == 0){
+    selectedIndex=(selectedIndex)-1;
+  }
+    if (selectedIndex > cellCount) {
+      selectedIndex=1;
+  }
+  if (selectedIndex < 1) {
+      selectedIndex=cellCount;
+  }
+
+  forarray1=selectedIndex;
+  
+    for (var i = 1; i <= cellCount; i++) {
+  var carousel1 = document.querySelector('.carousel__cell:nth-child(' + i + ')');
+
+  var redcarousel1 = document.querySelector('.redring:nth-child(' + i + ')');
+
+  var meneupop = document.querySelector('.foldertop:nth-child(' + i + ')');
+    
+  forarray1=forarray1+1;
+
+    if (forarray1 > cellCount) {forarray1=0;} 
+           
+    forarray2=forarray1-1;
+
+  if (forarray2 < 0) {
+    forarray2=0;
+    forarray1=forarray1+1;
+  } 
+
+  carousel1.style.transform = 'translateZ('+ alltxz[forarray2][1] +'vw) translatex(' + alltxz[forarray2][0] + 'rem)';
+  carousel1.style.opacity = ''+alltxz[forarray2][2]+'';
+
+  redcarousel1.style.transform = 'translateZ('+ alltxz[forarray2][1] +'vw) translatex(' + alltxz[forarray2][0] + 'rem)';
+  redcarousel1.style.opacity = ''+alltxz[forarray2][3]+'';
+
+   /**
+changing the menus pupups
+ */
+  meneupop.style.transform = 'translatey('+alltxz[forarray2][4]+'rem)';
+  if (alltxz[forarray2][4] == alltxz[0][4]) {
+    trueselected=i;
+  } 
+}
+/**
+this is very big and it changes depending on the languig i will make 3 languigis for 3 text it will take some time
+ */
+
+var trythis = document.querySelector('.foldertop:nth-child(' + trueselected + ')');
+if (trueselected == 1) {
+/**
+this text is for the copany about us
+ */
+
+ document.getElementById("1strong").textContent =
+  "What we do for you";
+ document.getElementById("2strong").innerHTML =
+  "Comforting to know";
+ document.getElementById("3strong").innerHTML =
+  "More about us";
+
+ document.getElementById("p1").textContent =
+  "We are all looking for the best offers from service companies and insurance offers in Germany to enjoy a better life and to save time That is why From now on, you do not need to make multiple calls in order to choose the best. One on one calls with one of 2030 ROYAL employees that can speak in your mother tongue." ;
+ document.getElementById("p2").innerHTML =
+  "You can cancel any old contracts, find out the best offers and compare them, and then avail the contract that suits you. Not only that, but you also get a gift after making a contract with us.";
+ document.getElementById("p3").innerHTML =
+  "ROYAL is one of the leading companies in Germany in the field of concluding service contracts and insurance offers, where the number of our customers has reached more than 30 thousand, and services are not limited only to concluding contracts, but also follow up with customers throughout the contract period and provide free advice in multiple areas, the most important of which are: Electricity Gas Car and Internet";
+
+ document.getElementById("1img").src="/img/picsforanasi/royal1.jpeg";
+ document.getElementById("2img").src="/img/picsforanasi/royal2.jpeg";
+ document.getElementById("3img").src="/img/picsforanasi/royal3.png";
+}else if (trueselected == 2) {
+
+  /**
+this text is for the copany teeth insurance
+ */
+  var strong1 = document.getElementById("1strong").innerHTML =
+  "Additional dental insurance in Germany.";
+  var strong2 = document.getElementById("2strong").innerHTML =
+  "How dose it work?";
+ document.getElementById("3strong").innerHTML =
+  "Important to know!";
+
+ document.getElementById("p1").innerHTML =
+  "Oral and dental health is an integral part of public health. It is affected by it and affects it positively or negatively. Toothache is considered one of the most difficult pains that people of all ages experience. In addition to the mandatory health insurance, there is an additional dental insurance, this insurance is very important for anyone, especially people who have expected problems in dental health and cosmetic matters that includes Hollywood smile, whitening and dental crowns.      ";
+ document.getElementById("p2").innerHTML =
+  "The prices of this insurance depends on the services covered by the insurance, as well as the age of the people and the current state of their teeth. I will mention some of the services covered by this insurance that a person may need: For children, placing an orthodontic device (in some cases, the government health insurance does not pay all the costs, but if there is additional dental insurance, it pays the extra costs) As for adults, in dental clinics, they need dental fillings, root canal treatment, crowning, dental implants, Hollywood smile, orthodontics and other treatments. In some cases, the compulsory health insurance does not pay the full costs even when the person contributes a certain amount, but in the event of additional dental insurance, our insurance fills in these gaps.";
+ document.getElementById("p3").innerHTML =
+  "A person needs to go to the doctor several times a year to clean the teeth. It is known that the mandatory health insurance pays for this service once and does not pay for the so-called Hollywood smile because it is considered cosmetic luxury and not needed, and the person must pay the amount to the doctor for this service, with the presence of additional insurance Dental care bears costs up to 100% As for the most important element is dental implants, it is known that compulsory insurance companies do not pay in any way for dental implants, so additional dental insurance remains the best solution to implant your teeth in Germany with high quality. The percentage of covering costs provided by companies. Companies often provide between 60 to 100 percent of the invoice value, according to your request. Taking into account the increase in the insurance premium with the increase in age The cost of this insurance starts from 6 euros per month up to 65 euros, as I mentioned previously depends on the services and age. Where the waiting period is one month after the conclusion of the contract";
+
+ document.getElementById("1img").src="/img/picsforanasi/dental1.jpeg";
+ document.getElementById("2img").src="/img/picsforanasi/dental2.jpeg";
+ document.getElementById("3img").src="/img/picsforanasi/dental3.jpeg";
+}else if (trueselected == 3) {
+/**
+this text is for the copany gas insurane
+ */
+document.getElementById("1strong").innerHTML =
+"Gas and Electricity Contracts.";
+document.getElementById("2strong").innerHTML =
+"Interesting to know";
+document.getElementById("3strong").innerHTML =
+"Have ease of mind with us";
+
+document.getElementById("p1").innerHTML =
+" ROYAL is one of the largest intermediary companies with most gas and electricity companies in Germany, which makes its options for the customer multiple and wide.";
+document.getElementById("p2").innerHTML =
+"It is important to have a reliable and trustworthy company for all your utilities and needs, and 2030 ROYAL can do that for you. We provide open communication and no hassle on our customers.";
+document.getElementById("p3").innerHTML =
+"We can also cancel the old contract and follow up with you throughout the contract period with a gift provided by the company and permanent ustomer service calls.";
+
+document.getElementById("1img").src="/img/picsforanasi/gas2.jpeg";
+document.getElementById("2img").src="/img/picsforanasi/electricity1.jpeg";
+document.getElementById("3img").src="/img/picsforanasi/gas1.jpeg";
+}else if (trueselected == 4) {
+
+ /**
+this text is for the copany life insurance
+ */
+
+
+document.getElementById("1strong").innerHTML =
+"What is General insurance.";
+document.getElementById("2strong").innerHTML =
+"Interesting to know";
+document.getElementById("3strong").innerHTML =
+"Have ease of mind with us";
+
+document.getElementById("p1").innerHTML =
+"General insurance is important to safeguard your well-being and your family in case of any accidents or illness. It is better to be safe than deal with it later on. ";
+document.getElementById("p2").innerHTML =
+"ROYAL guarantees you and your family, we are here to help you invest in your future. Get a General Insurance with us and we can offer you a variety of plans catered to your needs.";
+document.getElementById("p3").innerHTML =
+"From now on, do not hesitate to conduct a free consultation with ROYAL and contact us immediately for free in your mother tongue by the competent employee or by making a phone call with one of our employees to enjoy better services and wider offers.";
+
+document.getElementById("1img").src="/img/picsforanasi/life3.jpeg";
+document.getElementById("2img").src="/img/picsforanasi/life1.jpeg";
+document.getElementById("3img").src="/img/picsforanasi/life2.jpeg";
+}else if (trueselected == 5) {
+
+ /**
+this text is for the copany interet
+ */
+ document.getElementById("1strong").innerHTML =
+"Internet Contracts";
+document.getElementById("2strong").innerHTML =
+"Interesting to know";
+document.getElementById("3strong").innerHTML =
+"Have ease of mind with us";
+
+document.getElementById("p1").innerHTML =
+"What distinguishes Royal Company most is to provide offers from the largest telecommunications companies in Germany such as VODAFON, TELECOM, 1&1 and more!";
+document.getElementById("p2").innerHTML =
+"We provide one on one customer service and a fast solution rate here in ROYAL.";
+document.getElementById("p3").innerHTML =
+"Trust in us to give you your money’s worth for a stronger and better internet connection.";
+
+document.getElementById("1img").src="/img/picsforanasi/internet1.jpeg";
+document.getElementById("2img").src="/img/picsforanasi/internet3.jpeg";
+document.getElementById("3img").src="/img/picsforanasi/internet2.jpeg";
+
+}else if (trueselected == 6) {
+
+/**
+this text is for the caar
+*/
+
+document.getElementById("1strong").innerHTML =
+"Our car insurance";
+document.getElementById("2strong").innerHTML =
+"Interesting to know";
+document.getElementById("3strong").innerHTML =
+"Have ease of mind with us";
+
+document.getElementById("p1").innerHTML =
+"What distinguishes our offers is that they are among the best offers in Germany and the services provided around the clock.";
+document.getElementById("p2").innerHTML =
+"Do not hesitate to travel and rely on your vehicle, make the most out of it with a trustworthy and reliable car insurance here at 2030 ROYAL.";
+document.getElementById("p3").innerHTML =
+"Take care of your Car like it’s a part of you because most of the time it is! Car insurance offers are very important, to know more, you can contact us.";
+
+document.getElementById("1img").src="/img/picsforanasi/car1.jpeg";
+document.getElementById("2img").src="/img/picsforanasi/car2.jpeg";
+document.getElementById("3img").src="/img/picsforanasi/car3.jpeg";
+}else if (trueselected == 7) {
+
+/**
+this text is for the building insurance
+*/
+document.getElementById("1strong").innerHTML =
+"House Insurance";
+document.getElementById("2strong").innerHTML =
+"Interesting to know";
+document.getElementById("3strong").innerHTML =
+"Have ease of mind with us";
+
+document.getElementById("p1").innerHTML =
+"Our Homes are important for us, it houses our family, belongings and our lives. Protect and Care for your homes with 2030 ROYAL Insurance, it offers a range of services to make sure your home and family will be safe";
+document.getElementById("p2").innerHTML =
+"Services will include damages from water, fire, hurricane, hail, lightning or other disasters listed in the contract.";
+document.getElementById("p3").innerHTML =
+"Trust our dependable company policies and worry no more for your home's safety.";
+
+document.getElementById("1img").src="/img/picsforanasi/house3.jpeg";
+document.getElementById("2img").src="/img/picsforanasi/house1.jpeg";
+document.getElementById("3img").src="/img/picsforanasi/house2.jpeg";
+}     
+  
+}
+
+
+
+var prevButton = document.querySelector('.previous-button');
+prevButton.addEventListener( 'click', function() {
+  derectionofcursel=0;
+  rotateCarousel();
+});
+
+var nextButton = document.querySelector('.next-button');
+nextButton.addEventListener( 'click', function() {
+  derectionofcursel=1;
+  rotateCarousel();
+});
+
+
+
+
+function myFunctionnav() {
+  var x = document.getElementById("myLinksnavbar");
+  var languigx = document.getElementById("myLinkslanguig");
+
+  if (x.style.transform === "translateY(0rem)") {
+    x.style.transform = "translateY(-19.5rem)";
+    
+  } else {
+    x.style.transform = "translateY(0rem)";
+    languigx.style.transform = "translateY(-8rem)";
+  }
+
+}
+
+function myFunctionlan() {
+  var languigx = document.getElementById("myLinkslanguig");
+  var x = document.getElementById("myLinksnavbar");
+
+  if (languigx.style.transform === "translateY(0rem)") {
+    languigx.style.transform = "translateY(-8rem)";
+    
+  } else {
+    languigx.style.transform = "translateY(0rem)";
+    x.style.transform = "translateY(-19.5rem)";
+  }
+
+
+}
+</script>
+
+</body>
+</html>
